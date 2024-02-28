@@ -1,0 +1,22 @@
+﻿@using Asp.NETSchool.ViewModels
+@model AppUser
+<h4 class="m-2">Edit a new user</h4>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<form asp-action="Edit">
+    <label class="m-2" @*asp-for="@Model.Id"*@>User ID: @Model.Id</label>
+    <div class="form-group m-2">
+        <label asp-for="UserName"></label>
+        <input type="text" class="form-control" asp-for="UserName" disabled/>
+    
+    </div>
+    <div class="form-group m-2">
+        <label asp-for="Email"></label>
+        <input type="email" class="form-control" asp-for="Email" />
+    </div>
+    @*pozor u password zmena...nechci,at je heslo videt, chci ho ale zmenit*@
+    <div class="form-group m-2">
+        <label form="password">Password</label>
+        <input name="password" type="text" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success  m-2">Save changes</button>
+</form>

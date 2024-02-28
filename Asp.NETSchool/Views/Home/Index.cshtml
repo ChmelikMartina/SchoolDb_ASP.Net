@@ -1,0 +1,11 @@
+﻿@model string
+@*zapis pro zalozku--mistu ViewData se da pouzit i ViewBag*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@*zapis pro zalozku--KONEC*@
+<h1>Welcome</h1>
+<div>
+    @Model
+</div>
+<a class="btn btn-warning" asp-controller="Account" asp-action="Logout">Log out</a>
